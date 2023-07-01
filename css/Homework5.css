@@ -1,0 +1,109 @@
+/*
+File: homework5.css
+GUI Assignment 5: To implement a bit of the game of Scrabble using drag-and-drop.
+Christian Kayego, UMass Lowell Computer Science, christian_kayego@student.uml.edu
+In this assignment, the goal is to implement a bit of the game of Scrabble using drag-and-drop. 
+The idea is to display one line of the Scrabble board to the user along with seven 
+letter tiles on a tile rack. The user then drags tiles to the board to make a word, 
+and you are to report his or her score, taking the letter values and bonus squares 
+into consideration. 
+Copyright (c) 2023 by Christian Kayego. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Christian Kayego on June 25, 2023 at 10:00 am
+Sources used: https://www.w3schools.com/, https://www.youtube.com/watch?v=UB1O30fR-EE, https://stackoverflow.com/
+jQueryUI1.8_Ch06_SliderWidget.pdf, jQueryUI1.8_Ch03_TabsWidget.pdf
+https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css --
+https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js -
+*/
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #scrabble-line {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Tile Holder Styling */
+  #scrabble-tile-holder {
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  /* Tiles Styling */
+  #rack {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+  }
+  
+  .tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ffd700;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 24px;
+    letter-spacing: -1px;
+    cursor: pointer;
+  }
+  
+  /* Letters Styling */
+  #letters {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Score Styling */
+  #score_display {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  #score {
+    font-weight: bold;
+  }
+  
+  /* Rack Styling */
+  #rack {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Start New Game Button Styling */
+  #restart {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #restart:hover {
+    background-color: #45a049;
+  }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title> Scrabble Board Sample </title>
+
+    <link rel="stylesheet" href="css/Homework5.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+     
+<!--
+File: homework5.html
+GUI Assignment 5: To implement a bit of the game of Scrabble using drag-and-drop.
+Christian Kayego, UMass Lowell Computer Science, christian_kayego@student.uml.edu
+In this assignment, the goal is to implement a bit of the game of Scrabble using drag-and-drop. 
+The idea is to display one line of the Scrabble board to the user along with seven 
+letter tiles on a tile rack. The user then drags tiles to the board to make a word, 
+and you are to report his or her score, taking the letter values and bonus squares 
+into consideration. 
+Copyright (c) 2023 by Christian Kayego. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Christian Kayego on June 25, 2023 at 10:00 am
+Sources used: https://www.w3schools.com/, https://www.youtube.com/watch?v=UB1O30fR-EE, https://stackoverflow.com/
+jQueryUI1.8_Ch06_SliderWidget.pdf, jQueryUI1.8_Ch03_TabsWidget.pdf
+https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css --
+https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js -
+-->
+  </head>
+  
+
+  <body>
+    <body class="main">
+      <h1 class="center">My Bit of the Scrabble Game with Drag-and-Drop</h1>
+    <h2 class="center">Scrabble Sample</h2>
+
+    <!-- Display scrabble line -->
+    <div id="scrabble-board"></div>
+    <span><img id="scrabble-line" src="graphics_data copy/Scrabble_Board_OneLine.png"></span>
+
+    <!-- Display table -->
+    <table id="game-board">
+      <tr>
+        <td class="drop-here"></td>
+        <td class="drop-here"></td>
+        <td class="drop-here"></td>
+        <td class="drop-here"></td>
+        <td class="drop-here"></td>
+        <td class="drop-here"></td>
+        <td class="drop-here"></td>
+      </tr>
+    </table>
+
+    <!-- Display tile holder -->
+    <span><img id="scrabble-tile-holder" src="graphics_data copy/scrabble-tile-holder-406774_640.png"></span>
+
+    <!-- Display randomized scrabble tiles -->
+    <div id="rack" class="tiles"></div>
+    <div id="letters"></div>
+    <span id="score_display">Score:<span id="score"></span></span>
+    <div id="rack"></div>
+    <input type="button" id="restart" value="Start New Game" onClick="window.location.reload()">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="js/Homework5.js"></script>
+  </body>
+</html>
